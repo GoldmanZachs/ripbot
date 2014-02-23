@@ -13,11 +13,15 @@ doge_api = DogeApi::DogeApi.new($my_api_key)
 puts "Loading search_bot.rb"
 
 search("twitter", :lang => "en") do |tweet|
-  if negative_balance break
+  if negative_balance? break
     
 end
   
-def negative_balance
+def negative_balance?
   doge_api.get_balance < 0
-end    
+end  
+  
+def insufficent_funds?(amount)
+  (doge_api.get_balance - amount) < 0
+end      
     
