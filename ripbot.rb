@@ -18,6 +18,6 @@ search("twitter", :lang => "en") do |tweet|
 end
   
 def negative_balance
-  (doge_api.get_balance < 0
+  doge_api.get_balance < 0
 end    
     
