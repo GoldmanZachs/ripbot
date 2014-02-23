@@ -2,6 +2,7 @@
 
 require 'rubygems'
 require 'chatterbot/dsl'
+require 'doge_api'
 
 puts "Loading search_bot.rb"
 
